@@ -16,6 +16,5 @@ In this project, we used Python programming language to explore data related to 
 4- Washington dataset
 
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+
 

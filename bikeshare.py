@@ -5,6 +5,7 @@ import numpy as np
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
  def about_dataset():
  print ("The datasets randomly selected data for the first six months of 2017 are provided for all three cities. \
     All three of the data files contain the same core six (6) columns:\
@@ -16,7 +17,7 @@ End Station (e.g., Sedgwick St & North Ave)\
 User Type (Subscriber or Customer)\
 The Chicago and New York City files also have the following two columns:\
 Gender\
-Birth Year")            
+Birth Year") 
 
 def get_filters():
     """
@@ -188,14 +189,18 @@ def user_stats(df):
         print('This city does not has a data for Gender')
         print('-'*40)
 
-    # TO DO: Display earliest, most recent, and most common year of birth
+    # TO DO: Display earliest, most recent, most common and average year of birth
     try:
         earliest_birth = df['Birth Year'].min()
         most_recent_birth = df['Birth Year'].max()
         most_common_birth = df['Birth Year'].mode()
+        avg_year_birth = df['Birth Year'].avg()
+
         print('Earliest birth year is: {}\n'.format(earliest_birth))
         print('Most recent birth year is: {}\n'.format(most_recent_birth))
         print('Most common birth year is: {}\n'.format(most_common_birth))
+        print('Average birth year is: {}\n'.format(avg_year_birth))
+
     except:
         print('This city does not has a data for Birth Year')
 
